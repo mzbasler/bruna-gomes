@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #B88FAE;
+  --secondary-color: #A0B8AB;
+  --accent-color: #CAC2C0;
+  --text-dark: #3a3940;
+  --text-light: #5B5A60;
+  --background: #ffffff;
+  --section-bg: #fafafa;
+
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: var(--text-dark);
+}
+
+body {
+  margin: 0;
+  background-color: var(--background);
+  color: var(--text-dark);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
