@@ -119,7 +119,7 @@ function App() {
                   </svg>
                   <div>
                     <strong>Horário</strong>
-                    <p>Seg a Sex: 08:00 - 20:00</p>
+                    <p>Seg a Sex: 07:00 - 20:00</p>
                   </div>
                 </div>
 
@@ -154,8 +154,7 @@ function App() {
           <div className="hero-content">
             <div className="hero-text">
               <h1>
-                Pilates & Fisioterapia <br />
-                <span className="hero-highlight">para Mulheres</span>
+                Pilates & Fisioterapia
               </h1>
               <p className="hero-subtitle">
                 Atendimento personalizado e exclusivo • Zona Norte de Porto Alegre
@@ -169,13 +168,12 @@ function App() {
               <div className="feature-item">
                 <div className="feature-icon">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <path d="M12 2L2 7l10 5 10-5-10-5z"/>
-                    <path d="M2 17l10 5 10-5M2 12l10 5 10-5"/>
+                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
                   </svg>
                 </div>
                 <div className="feature-content">
-                  <h3>Exclusivo</h3>
-                  <p>Ambiente reservado apenas para mulheres</p>
+                  <h3>Acolhedor</h3>
+                  <p>Ambiente reservado e acolhedor</p>
                 </div>
               </div>
               <div className="feature-item">
@@ -195,13 +193,13 @@ function App() {
               <div className="feature-item">
                 <div className="feature-icon">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
-                    <polyline points="9 22 9 12 15 12 15 22"/>
+                    <rect x="3" y="3" width="18" height="18" rx="2"/>
+                    <path d="M9 17V7h4a3 3 0 0 1 0 6H9"/>
                   </svg>
                 </div>
                 <div className="feature-content">
-                  <h3>Acolhedor</h3>
-                  <p>Ambiente confortável e tranquilo</p>
+                  <h3>Estacionamento</h3>
+                  <p>Estacionamento no local</p>
                 </div>
               </div>
             </div>
@@ -220,8 +218,8 @@ function App() {
               <h2>Bruna Gomes</h2>
               <p className="professional-title">Fisioterapeuta & Instrutora de Pilates</p>
               <p>
-                Com formação em Fisioterapia e especialização em RPG (Reeducação Postural Global),
-                dedico-me a ajudar mulheres a alcançarem seus objetivos de saúde e bem-estar através
+                Com formação em Fisioterapia,
+                dedico-me a ajudar pessoas a alcançarem seus objetivos de saúde e bem-estar através
                 de um atendimento personalizado e acolhedor.
               </p>
               <p>
@@ -236,11 +234,7 @@ function App() {
                 </div>
                 <div className="credential-item">
                   <span className="credential-icon">✓</span>
-                  <span>Instrutora de Pilates Certificada</span>
-                </div>
-                <div className="credential-item">
-                  <span className="credential-icon">✓</span>
-                  <span>Especialista em RPG</span>
+                  <span>Instrutora de Pilates</span>
                 </div>
               </div>
             </div>
@@ -255,7 +249,7 @@ function App() {
               <span className="section-label">Sobre</span>
               <h2>Local pensado para seu bem-estar físico e mental</h2>
               <p>
-                Espaço exclusivo para mulheres na Zona Norte de Porto Alegre, próximo ao
+                Espaço na Zona Norte de Porto Alegre, próximo ao
                 Shopping Wallig. Oferecemos Pilates em aparelhos e Fisioterapia com
                 atendimento personalizado em um ambiente acolhedor e reservado.
               </p>
@@ -271,11 +265,7 @@ function App() {
                 </div>
                 <div className="credential-item">
                   <span className="credential-icon">✓</span>
-                  <span>Instrutora de Pilates Certificada</span>
-                </div>
-                <div className="credential-item">
-                  <span className="credential-icon">✓</span>
-                  <span>Especialista em RPG</span>
+                  <span>Instrutora de Pilates</span>
                 </div>
               </div>
             </div>
@@ -518,27 +508,7 @@ function App() {
               </div>
             </div>
 
-            <div className="service-card-wrapper">
-              <div className="service-card">
-                <div className="service-icon">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-                    <polyline points="14 2 14 8 20 8"/>
-                    <line x1="16" y1="13" x2="8" y2="13"/>
-                    <line x1="16" y1="17" x2="8" y2="17"/>
-                    <polyline points="10 9 9 9 8 9"/>
-                  </svg>
-                </div>
-                <h3>Avaliação Postural</h3>
-                <p>Análise detalhada da postura e movimento para identificar desequilíbrios e criar plano de tratamento.</p>
-                <ul className="service-features">
-                  <li>Avaliação biomecânica</li>
-                  <li>Análise de movimento</li>
-                  <li>Relatório detalhado</li>
-                </ul>
-              </div>
             </div>
-          </div>
         </div>
       </section>
 
@@ -570,7 +540,7 @@ function App() {
                   </svg>
                   <div>
                     <strong>Horários</strong>
-                    <p>Segunda a Sexta: 08:00 - 20:00</p>
+                    <p>Segunda a Sexta: 07:00 - 20:00</p>
                   </div>
                 </div>
                 <div className="location-item">
@@ -605,7 +575,7 @@ function App() {
           <div className="contact-content">
             <div className="contact-text">
               <h2>Pronta para começar?</h2>
-              <p>Entre em contato para agendar sua avaliação gratuita e conhecer o studio.</p>
+              <p>Entre em contato para agendar sua avaliação e conhecer o studio.</p>
             </div>
             <div className="contact-buttons">
               <a href="https://api.whatsapp.com/send/?phone=51999264181&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-large">
@@ -630,7 +600,11 @@ function App() {
           <div className="footer-content">
             <div className="footer-col">
               <img src="/logo-horizontal2.svg" alt="Bruna Gomes" className="footer-logo" />
-              <p>Pilates e Fisioterapia exclusivo para mulheres em Porto Alegre, RS</p>
+              <div style={{marginTop: '16px'}}>
+                <p style={{fontSize: '1rem', fontWeight: '600', color: 'white', marginBottom: '2px'}}>Bruna Gomes</p>
+                <p style={{fontSize: '0.75rem', color: 'rgba(255, 255, 255, 0.45)', marginBottom: '8px'}}>CREFITO 272.375-F</p>
+                <p style={{fontSize: '0.875rem', color: 'rgba(255, 255, 255, 0.65)'}}>Fisioterapia e Pilates</p>
+              </div>
             </div>
             <div className="footer-col">
               <h4>Navegação</h4>
@@ -651,7 +625,7 @@ function App() {
               </p>
               <p style={{marginTop: '12px', fontSize: '0.875rem'}}>
                 <strong>Horário:</strong><br />
-                Seg a Sex: 08:00 - 20:00
+                Seg a Sex: 07:00 - 20:00
               </p>
             </div>
             <div className="footer-col footer-social">
