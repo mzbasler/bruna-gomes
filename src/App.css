@@ -329,6 +329,7 @@ html {
 
 .service-card-wrapper {
   position: relative;
+  display: flex;
 }
 
 .service-card-wrapper::before {
@@ -351,6 +352,9 @@ html {
   border: 2px solid #EDE7EE;
   position: relative;
   z-index: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .service-card:hover {
@@ -408,6 +412,7 @@ html {
   color: var(--text-light);
   line-height: 1.7;
   margin-bottom: 24px;
+  flex-grow: 1;
 }
 
 .service-features {
@@ -1068,6 +1073,7 @@ html {
     top: 0;
     right: -100%;
     height: 100vh;
+    height: 100dvh;
     width: 320px;
     background: white;
     flex-direction: column;
@@ -1078,7 +1084,7 @@ html {
     box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
     transition: right 0.3s ease;
     z-index: 1002;
-    overflow-y: hidden;
+    overflow: hidden;
   }
 
   .nav-links.active {
@@ -1086,25 +1092,29 @@ html {
   }
 
   .mobile-menu-logo {
-    padding: 24px 28px;
+    padding: 0 24px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.06);
     display: flex !important;
     align-items: center;
     justify-content: space-between;
-    height: 90px;
+    height: 8vh;
+    min-height: 60px;
+    max-height: 80px;
     flex-shrink: 0;
   }
 
   .mobile-menu-logo img {
-    width: 160px;
-    height: auto;
+    height: 3.5vh;
+    min-height: 26px;
+    max-height: 36px;
+    width: auto;
   }
 
   .mobile-menu-close {
     background: none;
     border: none;
-    width: 36px;
-    height: 36px;
+    width: 32px;
+    height: 32px;
     cursor: pointer;
     color: var(--text-dark);
     display: flex !important;
@@ -1120,21 +1130,23 @@ html {
   }
 
   .mobile-menu-close svg {
-    width: 28px;
-    height: 28px;
+    width: 24px;
+    height: 24px;
   }
 
   .mobile-menu-nav {
     display: flex !important;
     flex-direction: column;
-    padding: 24px 0;
+    justify-content: center;
+    flex: 1;
+    min-height: 0;
+    padding: 0;
     border-bottom: 1px solid rgba(0, 0, 0, 0.06);
-    flex-shrink: 0;
   }
 
   .mobile-menu-nav a {
-    font-size: 1.125rem;
-    padding: 14px 28px;
+    font-size: clamp(15px, 2.5vh, 18px);
+    padding: 2vh 24px;
     border-bottom: none;
     transition: background 0.2s ease;
     color: var(--text-dark);
@@ -1149,32 +1161,32 @@ html {
   .mobile-menu-section {
     display: block !important;
     border-bottom: 1px solid rgba(0, 0, 0, 0.06);
-    padding: 24px 28px;
+    padding: 2vh 24px;
     flex-shrink: 0;
   }
 
   .mobile-menu-section-title {
     display: block;
-    font-size: 0.8125rem;
+    font-size: 11px;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
     color: rgba(0, 0, 0, 0.4);
-    margin-bottom: 18px;
+    margin-bottom: 1.5vh;
   }
 
   .mobile-menu-social {
     display: flex !important;
     justify-content: flex-start;
-    gap: 18px;
+    gap: 14px;
   }
 
   .mobile-menu-social a {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 56px;
-    height: 56px;
+    width: clamp(44px, 7vh, 56px);
+    height: clamp(44px, 7vh, 56px);
     border-radius: 50%;
     background: #f5f3f4;
     color: var(--text-dark);
@@ -1184,29 +1196,28 @@ html {
   .mobile-menu-social a:hover {
     background: var(--primary-color);
     color: white;
-    transform: translateY(-3px);
   }
 
   .mobile-menu-social a svg {
-    width: 26px;
-    height: 26px;
+    width: 50%;
+    height: 50%;
   }
 
   .mobile-menu-contact {
     display: flex !important;
     flex-direction: column;
-    gap: 20px;
+    gap: 1.5vh;
   }
 
   .mobile-contact-item {
     display: flex;
-    gap: 16px;
+    gap: 12px;
     align-items: flex-start;
   }
 
   .mobile-contact-item svg {
-    width: 24px;
-    height: 24px;
+    width: 18px;
+    height: 18px;
     color: var(--primary-color);
     flex-shrink: 0;
     margin-top: 2px;
@@ -1214,18 +1225,18 @@ html {
 
   .mobile-contact-item strong {
     display: block;
-    font-size: 0.8125rem;
+    font-size: 10px;
     color: var(--primary-color);
-    margin-bottom: 5px;
+    margin-bottom: 3px;
     text-transform: uppercase;
     letter-spacing: 0.5px;
     font-weight: 600;
   }
 
   .mobile-contact-item p {
-    font-size: 1.0625rem;
+    font-size: clamp(14px, 2vh, 17px);
     color: var(--text-dark);
-    line-height: 1.5;
+    line-height: 1.4;
     margin: 0;
   }
 
@@ -1241,7 +1252,7 @@ html {
 
   .mobile-menu-cta-section {
     display: block !important;
-    padding: 28px;
+    padding: 2.5vh 24px;
     flex-shrink: 0;
   }
 
@@ -1253,15 +1264,15 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 12px;
+    gap: 10px;
     width: 100%;
-    padding: 20px 28px;
+    padding: clamp(14px, 2vh, 20px) 24px;
     background: var(--primary-color);
     color: white !important;
     text-decoration: none;
     border-radius: 50px;
     font-weight: 600;
-    font-size: 1.125rem;
+    font-size: clamp(15px, 2.2vh, 18px);
     transition: all 0.3s ease;
     box-shadow: 0 4px 12px rgba(197, 163, 199, 0.3);
   }
@@ -1269,13 +1280,11 @@ html {
   .mobile-cta-button:hover {
     background: #b88fae;
     color: white !important;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(197, 163, 199, 0.4);
   }
 
   .mobile-cta-button svg {
-    width: 22px;
-    height: 22px;
+    width: 20px;
+    height: 20px;
   }
 }
 
@@ -1381,49 +1390,71 @@ html {
     top: 0;
     right: -100%;
     height: 100vh;
-    width: 280px;
+    height: 100dvh;
+    width: 85vw;
+    max-width: 320px;
     background: white;
+    display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: stretch;
-    gap: 0;
     padding: 0;
     box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
     transition: right 0.3s ease;
     z-index: 1002;
-    overflow-y: hidden;
+    overflow: hidden;
   }
 
   .nav-links.active {
     right: 0;
   }
 
+  /* Header - altura fixa mínima */
   .mobile-menu-logo {
-    padding: 16px 20px;
+    height: 7vh;
+    min-height: 48px;
+    max-height: 60px;
+    padding: 0 5vw;
     border-bottom: 1px solid rgba(0, 0, 0, 0.06);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 65px;
     flex-shrink: 0;
   }
 
   .mobile-menu-logo img {
-    width: 125px;
-    height: auto;
+    height: 3vh;
+    min-height: 20px;
+    max-height: 28px;
+    width: auto;
   }
 
+  .mobile-menu-close {
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .mobile-menu-close svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  /* Navegação - cresce para ocupar espaço disponível */
   .mobile-menu-nav {
     display: flex;
     flex-direction: column;
-    padding: 12px 0;
+    justify-content: center;
+    flex: 1;
+    min-height: 0;
+    padding: 0;
     border-bottom: 1px solid rgba(0, 0, 0, 0.06);
-    flex-shrink: 0;
   }
 
   .mobile-menu-nav a {
-    font-size: 0.9375rem;
-    padding: 10px 20px;
+    font-size: clamp(14px, 2.5vh, 18px);
+    padding: 1.8vh 5vw;
     border-bottom: none;
     transition: background 0.2s ease;
     color: var(--text-dark);
@@ -1436,78 +1467,24 @@ html {
   }
 
   .mobile-menu-ctas {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    padding: 24px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    display: none;
   }
 
-  .mobile-menu-ctas .nav-cta {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    text-align: center;
-    border-radius: 50px;
-    padding: 12px 20px;
-    font-size: 0.9375rem;
-    background: var(--primary-color);
-    color: white;
-    text-decoration: none;
-    transition: all 0.3s ease;
-  }
-
-  .mobile-menu-ctas .nav-cta:hover {
-    background: #a77d9d;
-    transform: translateY(-2px);
-  }
-
-  .mobile-menu-ctas .nav-cta svg {
-    width: 16px;
-    height: 16px;
-  }
-
-  .mobile-menu-ctas .nav-whatsapp {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    text-align: center;
-    border-radius: 50px;
-    padding: 12px 20px;
-    font-size: 0.9375rem;
-    background: #25D366;
-    color: white;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    font-weight: 500;
-  }
-
-  .mobile-menu-ctas .nav-whatsapp:hover {
-    background: #20BA5A;
-    transform: translateY(-2px);
-  }
-
-  .mobile-menu-ctas .nav-whatsapp svg {
-    width: 18px;
-    height: 18px;
-  }
-
+  /* Seções de redes e info - compactas */
   .mobile-menu-section {
     border-bottom: 1px solid rgba(0, 0, 0, 0.06);
-    padding: 14px 20px;
+    padding: 1.5vh 5vw;
     flex-shrink: 0;
   }
 
   .mobile-menu-section-title {
     display: block;
-    font-size: 0.625rem;
+    font-size: 10px;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
     color: rgba(0, 0, 0, 0.4);
-    margin-bottom: 10px;
+    margin-bottom: 1vh;
   }
 
   .mobile-menu-social {
@@ -1520,8 +1497,8 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 42px;
-    height: 42px;
+    width: clamp(36px, 6vh, 48px);
+    height: clamp(36px, 6vh, 48px);
     border-radius: 50%;
     background: #f5f3f4;
     color: var(--text-dark);
@@ -1531,18 +1508,17 @@ html {
   .mobile-menu-social a:hover {
     background: var(--primary-color);
     color: white;
-    transform: translateY(-3px);
   }
 
   .mobile-menu-social a svg {
-    width: 20px;
-    height: 20px;
+    width: 50%;
+    height: 50%;
   }
 
   .mobile-menu-contact {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 1vh;
   }
 
   .mobile-contact-item {
@@ -1552,8 +1528,8 @@ html {
   }
 
   .mobile-contact-item svg {
-    width: 18px;
-    height: 18px;
+    width: 14px;
+    height: 14px;
     color: var(--primary-color);
     flex-shrink: 0;
     margin-top: 2px;
@@ -1561,7 +1537,7 @@ html {
 
   .mobile-contact-item strong {
     display: block;
-    font-size: 0.625rem;
+    font-size: 9px;
     color: var(--primary-color);
     margin-bottom: 2px;
     text-transform: uppercase;
@@ -1570,9 +1546,9 @@ html {
   }
 
   .mobile-contact-item p {
-    font-size: 0.875rem;
+    font-size: clamp(12px, 1.8vh, 15px);
     color: var(--text-dark);
-    line-height: 1.4;
+    line-height: 1.3;
     margin: 0;
   }
 
@@ -1586,8 +1562,9 @@ html {
     color: var(--primary-color);
   }
 
+  /* Botão CTA - fixo no final */
   .mobile-menu-cta-section {
-    padding: 16px 20px;
+    padding: 2vh 5vw;
     flex-shrink: 0;
   }
 
@@ -1599,15 +1576,15 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
+    gap: 10px;
     width: 100%;
-    padding: 14px 20px;
+    padding: clamp(12px, 1.8vh, 18px) 20px;
     background: var(--primary-color);
     color: white !important;
     text-decoration: none;
     border-radius: 50px;
     font-weight: 600;
-    font-size: 0.9375rem;
+    font-size: clamp(14px, 2vh, 16px);
     transition: all 0.3s ease;
     box-shadow: 0 4px 12px rgba(197, 163, 199, 0.3);
   }
@@ -1615,8 +1592,6 @@ html {
   .mobile-cta-button:hover {
     background: #b88fae;
     color: white !important;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(197, 163, 199, 0.4);
   }
 
   .mobile-cta-button svg {

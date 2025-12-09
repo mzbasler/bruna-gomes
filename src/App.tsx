@@ -225,7 +225,7 @@ function App() {
               <p>
                 Minha abordagem integra técnicas de Pilates em aparelhos com tratamentos fisioterapêuticos,
                 proporcionando resultados efetivos e duradouros. Cada sessão é planejada de forma individual,
-                respeitando as necessidades e limitações de cada aluna.
+                respeitando as necessidades e limitações de cada aluno.
               </p>
               <div className="professional-credentials">
                 <div className="credential-item">
@@ -256,7 +256,7 @@ function App() {
               <p>
                 Nossa abordagem integra avaliação postural completa, exercícios terapêuticos
                 e acompanhamento individualizado para cada objetivo específico. Venha nos
-                conhecer, será um prazer atendê-la!
+                conhecer, será um prazer atendê-lo!
               </p>
               <div className="credentials">
                 <div className="credential-item">
@@ -276,12 +276,60 @@ function App() {
         </div>
       </section>
 
+      <section id="servicos" className="services">
+        <div className="container">
+          <div className="section-header">
+            <span className="section-label">Serviços</span>
+            <h2>Como posso te ajudar?</h2>
+          </div>
+          <div className="services-grid">
+            <div className="service-card-wrapper">
+              <div className="service-card featured">
+                <div className="service-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+                  </svg>
+                </div>
+                <h3>Pilates Personalizado</h3>
+                <p>Aulas individuais ou em dupla focadas em seus objetivos específicos. Fortalecimento, flexibilidade e consciência corporal.</p>
+                <ul className="service-features">
+                  <li>Avaliação inicial</li>
+                  <li>Programa personalizado</li>
+                  <li>Equipamentos completos</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="service-card-wrapper">
+              <div className="service-card">
+                <div className="service-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                    <circle cx="8.5" cy="7" r="4"/>
+                    <path d="M20 8v6M23 11h-6"/>
+                  </svg>
+                </div>
+                <h3>Fisioterapia</h3>
+                <p>Tratamento especializado com foco em disfunções musculoesqueléticas e alívio de dores.</p>
+                <ul className="service-features">
+                  <li>Cervicalgia</li>
+                  <li>Disfunção temporomandibular (DTM)</li>
+                  <li>Cefaleia tensional</li>
+                  <li>Liberação miofascial</li>
+                </ul>
+              </div>
+            </div>
+
+            </div>
+        </div>
+      </section>
+
       <section id="instagram" className="gallery">
         <div className="container">
           <div className="section-header centered">
             <span className="section-label">Instagram</span>
-            <h2>Acompanhe nosso dia a dia</h2>
-            <p>Confira dicas, exercícios e novidades direto do nosso Instagram</p>
+            <h2>Siga o estúdio no Instagram</h2>
+            <p>Confira dicas, exercícios e novidades no Instagram</p>
           </div>
           <div className="gallery-grid">
             {/* Post 1 - Com múltiplas fotos */}
@@ -465,55 +513,6 @@ function App() {
         </div>
       </section>
 
-      <section id="servicos" className="services">
-        <div className="container">
-          <div className="section-header">
-            <span className="section-label">Serviços</span>
-            <h2>Como posso te ajudar?</h2>
-          </div>
-          <div className="services-grid">
-            <div className="service-card-wrapper">
-              <div className="service-card featured">
-                <div className="service-icon">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
-                  </svg>
-                </div>
-                <h3>Pilates Personalizado</h3>
-                <p>Aulas individuais ou em dupla focadas em seus objetivos específicos. Fortalecimento, flexibilidade e consciência corporal.</p>
-                <ul className="service-features">
-                  <li>Avaliação postural inicial</li>
-                  <li>Programa personalizado</li>
-                  <li>Equipamentos completos</li>
-                </ul>
-              </div>
-            </div>
-
-            <div className="service-card-wrapper">
-              <div className="service-card">
-                <div className="service-icon">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-                    <circle cx="8.5" cy="7" r="4"/>
-                    <path d="M20 8v6M23 11h-6"/>
-                  </svg>
-                </div>
-                <h3>Fisioterapia</h3>
-                <p>Tratamento especializado para reabilitação, prevenção de lesões e recuperação funcional.</p>
-                <ul className="service-features">
-                  <li>Reabilitação ortopédica</li>
-                  <li>Tratamento de lesões</li>
-                  <li>Prevenção e condicionamento</li>
-                </ul>
-              </div>
-            </div>
-
-            </div>
-        </div>
-      </section>
-
-
-
       <section id="localizacao" className="location">
         <div className="container">
           <div className="location-grid">
@@ -574,7 +573,7 @@ function App() {
         <div className="container">
           <div className="contact-content">
             <div className="contact-text">
-              <h2>Pronta para começar?</h2>
+              <h2>Pronto para começar?</h2>
               <p>Entre em contato para agendar sua avaliação e conhecer o studio.</p>
             </div>
             <div className="contact-buttons">
@@ -602,8 +601,8 @@ function App() {
               <img src="/logo-horizontal2.svg" alt="Bruna Gomes" className="footer-logo" />
               <div style={{marginTop: '16px'}}>
                 <p style={{fontSize: '1rem', fontWeight: '600', color: 'white', marginBottom: '2px'}}>Bruna Gomes</p>
-                <p style={{fontSize: '0.75rem', color: 'rgba(255, 255, 255, 0.45)', marginBottom: '8px'}}>CREFITO 272.375-F</p>
-                <p style={{fontSize: '0.875rem', color: 'rgba(255, 255, 255, 0.65)'}}>Fisioterapia e Pilates</p>
+                <p style={{fontSize: '0.875rem', color: 'rgba(255, 255, 255, 0.65)', marginBottom: '2px'}}>Pilates e Fisioterapia</p>
+                <p style={{fontSize: '0.75rem', color: 'rgba(255, 255, 255, 0.45)'}}>CREFITO 272.375-F</p>
               </div>
             </div>
             <div className="footer-col">
