@@ -81,12 +81,12 @@ html {
   cursor: pointer;
   padding: 0;
   z-index: 1001;
-  width: 32px;
-  height: 32px;
+  width: 40px;
+  height: 40px;
   align-items: center;
   justify-content: center;
   color: var(--text-dark);
-  transition: all 0.3s ease;
+  transition: color 0.3s ease;
 }
 
 .mobile-menu-toggle svg {
@@ -96,10 +96,32 @@ html {
 
 .mobile-menu-toggle:hover {
   color: var(--primary-color);
-  transform: rotate(90deg);
 }
 
-.mobile-menu-close,
+.mobile-menu-close {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-dark);
+  transition: color 0.3s ease;
+  flex-shrink: 0;
+}
+
+.mobile-menu-close svg {
+  width: 24px;
+  height: 24px;
+}
+
+.mobile-menu-close:hover {
+  color: var(--primary-color);
+}
+
 .mobile-menu-logo,
 .mobile-menu-nav,
 .mobile-menu-section,
@@ -997,7 +1019,8 @@ html {
   }
 
   .feature-item {
-    flex: 1;
+    flex: 1 1 0;
+    min-width: 0;
     flex-direction: column;
     align-items: center;
     text-align: center;
@@ -1055,7 +1078,7 @@ html {
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
   .nav-logo {
     height: 50px;
   }
@@ -1074,7 +1097,7 @@ html {
     right: -100%;
     height: 100vh;
     height: 100dvh;
-    width: 320px;
+    width: min(320px, 85vw);
     background: white;
     flex-direction: column;
     justify-content: flex-start;
@@ -1084,7 +1107,8 @@ html {
     box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
     transition: right 0.3s ease;
     z-index: 1002;
-    overflow: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
   }
 
   .nav-links.active {
@@ -1092,61 +1116,33 @@ html {
   }
 
   .mobile-menu-logo {
-    padding: 0 24px;
+    padding: 0 20px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.06);
     display: flex !important;
     align-items: center;
     justify-content: space-between;
-    height: 8vh;
+    height: 60px;
     min-height: 60px;
-    max-height: 80px;
     flex-shrink: 0;
   }
 
   .mobile-menu-logo img {
-    height: 3.5vh;
-    min-height: 26px;
-    max-height: 36px;
+    height: 28px;
     width: auto;
-  }
-
-  .mobile-menu-close {
-    background: none;
-    border: none;
-    width: 32px;
-    height: 32px;
-    cursor: pointer;
-    color: var(--text-dark);
-    display: flex !important;
-    align-items: center;
-    justify-content: center;
-    transition: color 0.3s ease;
-    padding: 0;
-    flex-shrink: 0;
-  }
-
-  .mobile-menu-close:hover {
-    color: var(--primary-color);
-  }
-
-  .mobile-menu-close svg {
-    width: 24px;
-    height: 24px;
   }
 
   .mobile-menu-nav {
     display: flex !important;
     flex-direction: column;
-    justify-content: center;
-    flex: 1;
-    min-height: 0;
-    padding: 0;
+    padding: 8px 0;
     border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    flex-shrink: 0;
   }
 
   .mobile-menu-nav a {
-    font-size: clamp(15px, 2.5vh, 18px);
-    padding: 2vh 24px;
+    font-size: 15px;
+    padding: 12px 20px;
+    line-height: 1.2;
     border-bottom: none;
     transition: background 0.2s ease;
     color: var(--text-dark);
@@ -1161,32 +1157,32 @@ html {
   .mobile-menu-section {
     display: block !important;
     border-bottom: 1px solid rgba(0, 0, 0, 0.06);
-    padding: 2vh 24px;
+    padding: 10px 20px;
     flex-shrink: 0;
   }
 
   .mobile-menu-section-title {
     display: block;
-    font-size: 11px;
+    font-size: 10px;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
     color: rgba(0, 0, 0, 0.4);
-    margin-bottom: 1.5vh;
+    margin-bottom: 8px;
   }
 
   .mobile-menu-social {
     display: flex !important;
     justify-content: flex-start;
-    gap: 14px;
+    gap: 10px;
   }
 
   .mobile-menu-social a {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: clamp(44px, 7vh, 56px);
-    height: clamp(44px, 7vh, 56px);
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     background: #f5f3f4;
     color: var(--text-dark);
@@ -1199,25 +1195,25 @@ html {
   }
 
   .mobile-menu-social a svg {
-    width: 50%;
-    height: 50%;
+    width: 18px;
+    height: 18px;
   }
 
   .mobile-menu-contact {
     display: flex !important;
     flex-direction: column;
-    gap: 1.5vh;
+    gap: 8px;
   }
 
   .mobile-contact-item {
     display: flex;
-    gap: 12px;
+    gap: 8px;
     align-items: flex-start;
   }
 
   .mobile-contact-item svg {
-    width: 18px;
-    height: 18px;
+    width: 14px;
+    height: 14px;
     color: var(--primary-color);
     flex-shrink: 0;
     margin-top: 2px;
@@ -1225,18 +1221,18 @@ html {
 
   .mobile-contact-item strong {
     display: block;
-    font-size: 10px;
+    font-size: 9px;
     color: var(--primary-color);
-    margin-bottom: 3px;
+    margin-bottom: 1px;
     text-transform: uppercase;
     letter-spacing: 0.5px;
     font-weight: 600;
   }
 
   .mobile-contact-item p {
-    font-size: clamp(14px, 2vh, 17px);
+    font-size: 13px;
     color: var(--text-dark);
-    line-height: 1.4;
+    line-height: 1.3;
     margin: 0;
   }
 
@@ -1252,7 +1248,7 @@ html {
 
   .mobile-menu-cta-section {
     display: block !important;
-    padding: 2.5vh 24px;
+    padding: 12px 20px;
     flex-shrink: 0;
   }
 
@@ -1264,15 +1260,15 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 8px;
     width: 100%;
-    padding: clamp(14px, 2vh, 20px) 24px;
+    padding: 12px 16px;
     background: var(--primary-color);
     color: white !important;
     text-decoration: none;
     border-radius: 50px;
     font-weight: 600;
-    font-size: clamp(15px, 2.2vh, 18px);
+    font-size: 14px;
     transition: all 0.3s ease;
     box-shadow: 0 4px 12px rgba(197, 163, 199, 0.3);
   }
@@ -1283,8 +1279,8 @@ html {
   }
 
   .mobile-cta-button svg {
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
   }
 }
 
@@ -1368,7 +1364,7 @@ html {
   }
 
   .navbar {
-    padding: 16px 0;
+    padding: 14px 0;
   }
 
   .navbar-content {
@@ -1388,11 +1384,10 @@ html {
   .nav-links {
     position: fixed;
     top: 0;
-    right: -100%;
+    right: -280px;
     height: 100vh;
     height: 100dvh;
-    width: 85vw;
-    max-width: 320px;
+    width: 280px;
     background: white;
     display: flex;
     flex-direction: column;
@@ -1401,60 +1396,37 @@ html {
     box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
     transition: right 0.3s ease;
     z-index: 1002;
-    overflow: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
   }
 
   .nav-links.active {
     right: 0;
   }
 
-  /* Header - altura fixa mínima */
+  /* Header */
   .mobile-menu-logo {
-    height: 7vh;
-    min-height: 48px;
-    max-height: 60px;
-    padding: 0 5vw;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-shrink: 0;
+    height: 60px;
+    min-height: 60px;
+    padding: 0 16px;
   }
 
   .mobile-menu-logo img {
-    height: 3vh;
-    min-height: 20px;
-    max-height: 28px;
-    width: auto;
+    height: 24px;
   }
 
-  .mobile-menu-close {
-    width: 28px;
-    height: 28px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .mobile-menu-close svg {
-    width: 20px;
-    height: 20px;
-  }
-
-  /* Navegação - cresce para ocupar espaço disponível */
+  /* Navegação */
   .mobile-menu-nav {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    flex: 1;
-    min-height: 0;
-    padding: 0;
+    padding: 8px 0;
     border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    flex-shrink: 0;
   }
 
   .mobile-menu-nav a {
-    font-size: clamp(14px, 2.5vh, 18px);
-    padding: 1.8vh 5vw;
+    font-size: 14px;
+    padding: 11px 16px;
     border-bottom: none;
     transition: background 0.2s ease;
     color: var(--text-dark);
@@ -1470,10 +1442,10 @@ html {
     display: none;
   }
 
-  /* Seções de redes e info - compactas */
+  /* Seções de redes e info */
   .mobile-menu-section {
     border-bottom: 1px solid rgba(0, 0, 0, 0.06);
-    padding: 1.5vh 5vw;
+    padding: 14px 16px;
     flex-shrink: 0;
   }
 
@@ -1484,21 +1456,21 @@ html {
     text-transform: uppercase;
     letter-spacing: 1px;
     color: rgba(0, 0, 0, 0.4);
-    margin-bottom: 1vh;
+    margin-bottom: 10px;
   }
 
   .mobile-menu-social {
     display: flex;
     justify-content: flex-start;
-    gap: 12px;
+    gap: 10px;
   }
 
   .mobile-menu-social a {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: clamp(36px, 6vh, 48px);
-    height: clamp(36px, 6vh, 48px);
+    width: 42px;
+    height: 42px;
     border-radius: 50%;
     background: #f5f3f4;
     color: var(--text-dark);
@@ -1511,14 +1483,14 @@ html {
   }
 
   .mobile-menu-social a svg {
-    width: 50%;
-    height: 50%;
+    width: 18px;
+    height: 18px;
   }
 
   .mobile-menu-contact {
     display: flex;
     flex-direction: column;
-    gap: 1vh;
+    gap: 10px;
   }
 
   .mobile-contact-item {
@@ -1546,9 +1518,9 @@ html {
   }
 
   .mobile-contact-item p {
-    font-size: clamp(12px, 1.8vh, 15px);
+    font-size: 13px;
     color: var(--text-dark);
-    line-height: 1.3;
+    line-height: 1.35;
     margin: 0;
   }
 
@@ -1562,9 +1534,9 @@ html {
     color: var(--primary-color);
   }
 
-  /* Botão CTA - fixo no final */
+  /* Botão CTA */
   .mobile-menu-cta-section {
-    padding: 2vh 5vw;
+    padding: 16px;
     flex-shrink: 0;
   }
 
@@ -1576,15 +1548,15 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 8px;
     width: 100%;
-    padding: clamp(12px, 1.8vh, 18px) 20px;
+    padding: 12px 16px;
     background: var(--primary-color);
     color: white !important;
     text-decoration: none;
     border-radius: 50px;
     font-weight: 600;
-    font-size: clamp(14px, 2vh, 16px);
+    font-size: 14px;
     transition: all 0.3s ease;
     box-shadow: 0 4px 12px rgba(197, 163, 199, 0.3);
   }
@@ -1595,8 +1567,8 @@ html {
   }
 
   .mobile-cta-button svg {
-    width: 18px;
-    height: 18px;
+    width: 16px;
+    height: 16px;
   }
 
   .hero {
@@ -1622,12 +1594,13 @@ html {
 
   .hero-features {
     flex-direction: column;
-    gap: 16px;
+    gap: 12px;
   }
 
   .feature-item {
     flex-direction: row;
     text-align: left;
+    padding: 16px;
   }
 
   .gallery-grid {
@@ -1688,14 +1661,6 @@ html {
     display: none;
   }
 
-  .hero-features {
-    gap: 12px;
-  }
-
-  .feature-item {
-    padding: 16px;
-  }
-
   .feature-icon {
     width: 40px;
     height: 40px;
@@ -1744,7 +1709,12 @@ html {
   }
 
   .nav-links {
-    gap: 16px;
+    width: 280px;
+    right: -280px;
+  }
+
+  .nav-links.active {
+    right: 0;
   }
 
   .nav-links a {
@@ -1754,6 +1724,74 @@ html {
   .nav-links .nav-cta {
     padding: 7px 14px;
     font-size: 0.875rem;
+  }
+
+  /* Mobile menu - otimizado para telas pequenas */
+  .mobile-menu-logo {
+    height: 60px;
+    min-height: 60px;
+    padding: 0 16px;
+  }
+
+  .mobile-menu-logo img {
+    height: 22px;
+  }
+
+  .mobile-menu-nav a {
+    font-size: 14px;
+    padding: 10px 16px;
+  }
+
+  .mobile-menu-section {
+    padding: 12px 16px;
+  }
+
+  .mobile-menu-section-title {
+    font-size: 10px;
+    margin-bottom: 8px;
+  }
+
+  .mobile-menu-social a {
+    width: 40px;
+    height: 40px;
+  }
+
+  .mobile-menu-contact {
+    gap: 10px;
+  }
+
+  .mobile-contact-item {
+    gap: 8px;
+  }
+
+  .mobile-contact-item svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .mobile-contact-item strong {
+    font-size: 9px;
+    margin-bottom: 1px;
+  }
+
+  .mobile-contact-item p {
+    font-size: 12px;
+    line-height: 1.3;
+  }
+
+  .mobile-menu-cta-section {
+    padding: 12px 16px 16px;
+  }
+
+  .mobile-cta-button {
+    padding: 12px 16px;
+    font-size: 14px;
+    gap: 8px;
+  }
+
+  .mobile-cta-button svg {
+    width: 16px;
+    height: 16px;
   }
 
   .hero h1 {
@@ -1881,5 +1919,239 @@ html {
   .service-features li {
     font-size: 0.8125rem;
     padding: 10px 0;
+  }
+}
+
+/* Galaxy Z Fold e dispositivos com tela muito estreita (modo dobrado) */
+@media (max-width: 300px) {
+  .container {
+    padding: 0 12px;
+  }
+
+  .navbar {
+    padding: 10px 0;
+  }
+
+  .nav-logo {
+    height: 32px;
+  }
+
+  .nav-links {
+    width: 100vw;
+    max-width: 100vw;
+  }
+
+  .mobile-menu-logo {
+    height: 52px;
+    min-height: 52px;
+    padding: 0 12px;
+  }
+
+  .mobile-menu-logo img {
+    height: 18px;
+  }
+
+  .mobile-menu-nav a {
+    font-size: 13px;
+    padding: 8px 12px;
+  }
+
+  .mobile-menu-section {
+    padding: 10px 12px;
+  }
+
+  .mobile-menu-section-title {
+    font-size: 9px;
+    margin-bottom: 6px;
+  }
+
+  .mobile-menu-social {
+    gap: 8px;
+  }
+
+  .mobile-menu-social a {
+    width: 36px;
+    height: 36px;
+  }
+
+  .mobile-menu-contact {
+    gap: 8px;
+  }
+
+  .mobile-contact-item {
+    gap: 6px;
+  }
+
+  .mobile-contact-item svg {
+    width: 12px;
+    height: 12px;
+  }
+
+  .mobile-contact-item strong {
+    font-size: 8px;
+  }
+
+  .mobile-contact-item p {
+    font-size: 11px;
+    line-height: 1.25;
+  }
+
+  .mobile-menu-cta-section {
+    padding: 10px 12px 14px;
+  }
+
+  .mobile-cta-button {
+    padding: 10px 12px;
+    font-size: 13px;
+    gap: 6px;
+  }
+
+  .mobile-cta-button svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .hero {
+    margin-top: 52px;
+    padding: 40px 0 32px;
+  }
+
+  .hero h1 {
+    font-size: 1.625rem;
+    letter-spacing: -0.5px;
+  }
+
+  .hero-subtitle {
+    font-size: 0.875rem;
+    margin-bottom: 24px;
+  }
+
+  .section-header h2,
+  .about-content h2,
+  .location h2,
+  .contact h2,
+  .professional-content h2 {
+    font-size: 1.375rem;
+  }
+
+  .about,
+  .services,
+  .testimonials,
+  .professional,
+  .gallery,
+  .location,
+  .contact {
+    padding: 32px 0;
+  }
+
+  .btn {
+    padding: 10px 20px;
+    font-size: 0.875rem;
+  }
+
+  .btn-large {
+    padding: 12px 24px;
+    font-size: 0.9375rem;
+  }
+
+  .feature-item {
+    padding: 12px;
+    gap: 12px;
+  }
+
+  .feature-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .feature-icon svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .feature-content h3 {
+    font-size: 1rem;
+  }
+
+  .feature-content p {
+    font-size: 0.8125rem;
+  }
+
+  .service-card {
+    padding: 20px 16px;
+  }
+
+  .service-icon {
+    width: 44px;
+    height: 44px;
+  }
+
+  .service-icon svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .service-card h3 {
+    font-size: 1.125rem;
+  }
+
+  .service-card p {
+    font-size: 0.8125rem;
+  }
+
+  .service-features li {
+    font-size: 0.75rem;
+    padding: 8px 0;
+  }
+
+  .location-item {
+    padding: 14px;
+    gap: 12px;
+  }
+
+  .location-item svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .location-map {
+    height: 250px;
+    min-height: 200px;
+  }
+
+  .contact h2 {
+    font-size: 1.375rem;
+  }
+
+  .contact p {
+    font-size: 1rem;
+    margin-bottom: 32px;
+  }
+
+  .footer {
+    padding: 40px 0 20px;
+  }
+
+  .footer-logo {
+    height: 32px;
+  }
+
+  .footer-col h4 {
+    font-size: 0.75rem;
+  }
+
+  .footer-col a,
+  .footer-col p {
+    font-size: 0.8125rem;
+  }
+
+  .footer-social-icons a {
+    width: 40px;
+    height: 40px;
+  }
+
+  .footer-social-icons svg {
+    width: 20px;
+    height: 20px;
   }
 }
