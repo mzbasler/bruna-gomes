@@ -153,11 +153,12 @@ function App() {
         <div className="container">
           <div className="hero-content">
             <div className="hero-text">
+              <img src="/logo-horizontal.svg" alt="Bruna Gomes" className="hero-logo" />
               <h1>
                 Pilates & Fisioterapia
               </h1>
               <p className="hero-subtitle">
-                Atendimento personalizado e exclusivo • Zona Norte de Porto Alegre
+                Cuidado, fortalecimento e saúde.
               </p>
               <div className="hero-buttons">
                 <a href="#contato" className="btn btn-primary">Agendar Avaliação</a>
@@ -278,7 +279,7 @@ function App() {
 
       <section id="servicos" className="services">
         <div className="container">
-          <div className="section-header">
+          <div className="section-header centered">
             <span className="section-label">Serviços</span>
             <h2>Como posso te ajudar?</h2>
           </div>
@@ -515,10 +516,12 @@ function App() {
 
       <section id="localizacao" className="location">
         <div className="container">
+          <div className="section-header centered">
+            <span className="section-label">Localização</span>
+            <h2>Venha me visitar!</h2>
+          </div>
           <div className="location-grid">
             <div className="location-info">
-              <span className="section-label">Localização</span>
-              <h2>Venha me visitar!</h2>
               <div className="location-details">
                 <div className="location-item">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
