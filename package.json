@@ -8,9 +8,15 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "start": "serve dist -l 4173"
+    "start": "serve dist -l 4173",
+    "relatorio": "node scripts/relatorio-ga4.mjs",
+    "fetch-data": "node scripts/fetch-ga4-data.mjs",
+    "gerar-pdf": "node scripts/gerar-pdf.mjs"
   },
   "dependencies": {
+    "@google-analytics/data": "^5.2.1",
+    "pdfkit": "^0.17.2",
+    "puppeteer": "^24.37.5",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "serve": "^14.2.4",

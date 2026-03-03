@@ -22,3 +22,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Google Analytics (relatorio interno, nao vai para producao)
+scripts/credentials.json
+relatorio-ga4.pdf
+src/relatorio-data.json
