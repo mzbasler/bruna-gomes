@@ -24,5 +24,6 @@
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true
   },
-  "include": ["src"]
+  "include": ["src"],
+  "exclude": ["src/Relatorio.tsx", "src/relatorio-main.tsx", "src/Relatorio.css"]
 }
